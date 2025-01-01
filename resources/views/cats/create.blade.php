@@ -21,8 +21,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="decs" class="form-label">decs</label>
-                <input type="text" name="decs" id="decs" class="form-control" required>
+                <label for="desc" class="form-label">desc</label>
+                <input type="text" name="desc" id="desc" class="form-control" required>
             </div>
 
             <div class="mb-3">

@@ -19,8 +19,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="decs" class="form-label">decsription</label>
-                <textarea name="decs" id="decs" class="form-control" rows="5" required>{{ $cat->decs }}</textarea>
+                <label for="desc" class="form-label">description</label>
+                <textarea name="desc" id="desc" class="form-control" rows="5" required>{{ $cat->desc }}</textarea>
             </div>
             <div class="mb-3">
                 <label for="img" class="form-label">Image</label>

@@ -34,7 +34,7 @@ class CatController extends Controller
     public function store(Request $request){
         $request->validate([
             'name' => 'required | string | max : 50',
-            'decs' => 'required | string ',
+            'desc' => 'required | string ',
             'img' => 'required | image | max : 2048',
 
         ]);
@@ -44,7 +44,7 @@ class CatController extends Controller
     
         Cat::create([
             'name' => $request->name,
-            'decs' => $request->decs,
+            'desc' => $request->desc,
             'img' => $imgPath
         ]);
 
@@ -66,7 +66,7 @@ class CatController extends Controller
     
     $request->validate([
         'name' => 'required|string|max:50',
-        'decs' => 'required|string',
+        'desc' => 'required|string',
         'img' => 'nullable|image|max:2048',
     ]);
 
@@ -83,7 +83,7 @@ class CatController extends Controller
 
     
     $cat->name = $request->name;
-    $cat->decs = $request->decs;
+    $cat->desc = $request->desc;
 
     
     $cat->save();

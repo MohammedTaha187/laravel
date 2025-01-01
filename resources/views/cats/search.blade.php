@@ -27,7 +27,7 @@
                     <h5 class="card-title">
                         {{ $cat->id }} - <a href="{{ url('/cats/show/' . $cat->id) }}" class="text-decoration-none">{{ $cat->name }}</a>
                     </h5>
-                    <p class="card-text">{{ $cat->decs }}</p>
+                    <p class="card-text">{{ $cat->desc }}</p>
                     <a href="{{ url('/cats/edit/' . $cat->id) }}" class="btn btn-warning">Edit</a>
                 </div>
             </div>

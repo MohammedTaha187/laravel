@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('cats', function (Blueprint $table) {
             $table->id();
             $table->string('name' , 255);
-            $table->text('decs');
+            $table->text('desc');
             $table->string('img' , 255)->nullable();
             $table->timestamps();
         });

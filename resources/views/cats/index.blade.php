@@ -25,7 +25,7 @@ Categories
                     {{ $cat->id }} - 
                     <a href="{{ url('/cats/show/' . $cat->id) }}">{{ $cat->name }}</a>
                 </h3>
-                <p>{{ $cat->decs }}</p>
+                <p>{{ $cat->desc }}</p>
                 <div class="d-flex gap-2">
                     <a class="btn btn-warning btn-sm" href="{{ url('/cats/edit/' . $cat->id) }}">Edit</a>
                     <a class="btn btn-danger btn-sm" href="{{ url('/cats/delete/' . $cat->id) }}">Delete</a>
