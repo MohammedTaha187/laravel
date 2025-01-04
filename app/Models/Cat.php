@@ -9,4 +9,10 @@ class Cat extends Model
 {
     use HasFactory;
     protected $fillable = ['name' , 'desc' , 'img'];
+
+    public function books(){
+        return $this->hasMany(Book::class);
+    }
+
+   
 }

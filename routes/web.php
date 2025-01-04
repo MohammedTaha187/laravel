@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatController;
+use App\Http\Controllers\BookController;
 
 
 /*
@@ -16,7 +18,7 @@ use App\Http\Controllers\CatController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/cats');
 });
 
 
@@ -28,3 +30,9 @@ Route::get('/cats/edit/{id}', [CatController::class , 'edit']);
 Route::post('/cats/update/{id}', [CatController::class , 'update']);
 Route::get('/cats/delete/{id}', [CatController::class , 'delete']);
 Route::get('/cats/search', [CatController::class, 'search']);
+
+
+Route::get('/books', [BookController::class , 'index']);
+Route::get('/books/show/{id}', [BookController::class , 'show']);
+Route::get('/books/create', [BookController::class , 'create']);
+Route::post('/books/store', [BookController::class , 'store']);
