@@ -50,8 +50,6 @@ class BookController extends Controller
             'desc' => 'required | string ',
             'price'=> 'required | numeric',
             'cat_id'=> 'required | exists:cats,id',
-
-
             'img' => 'required | image | max : 2048',
 
         ]);

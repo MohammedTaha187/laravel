@@ -11,7 +11,15 @@
 </head>
 <body>
     <div class="container">
+      <ul class="nav justify-content-end">
+        @auth
+        <li class="nav-item">
+          <a class="nav-link" href="{{url('/logout')}}">logout</a>
+        </li>
+        @endauth
+      </ul>
  @yield('body')
+
     </div>
     <script
   src="https://code.jquery.com/jquery-3.7.1.js"

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('head')
-    <title>Register</title>
+    Register
 @endsection
 
 @section('body')
@@ -31,7 +31,7 @@
                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm your password" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Register</button>
+            <button type="submit" value="register" class="btn btn-primary w-100">Register</button>
         </form>
 
         <div class="text-center mt-3">

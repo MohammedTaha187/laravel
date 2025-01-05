@@ -1,16 +1,17 @@
 @extends('layout')
 
 @section('head')
-Books
+Category
 @endsection
 
 @section('body')
-<div class="container mt-5">
+
+<div class="container mt-5">    
     @include('success')
-    <h1 class="text-center mb-4">All Books</h1>
+    <h1 class="text-center mb-4">All Cats</h1>
 
     <div class="d-flex justify-content-center mb-4">
-        <a class="btn btn-success" href="{{ url('/cats/create') }}">Add New Book</a>
+        <a class="btn btn-success" href="{{ url('/cats/create') }}">Add New Cat</a>
     </div>
 
     @include('errors')

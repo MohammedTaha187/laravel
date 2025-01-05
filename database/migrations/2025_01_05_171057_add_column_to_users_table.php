@@ -13,14 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
-            $table->id();
-            $table->string('name' , 255);
-            $table->text('desc');
-            $table->string('img' , 255);
-            $table->decimal('price' , 10 , 2);
-            $table->foreignId('cat_id')->constrained()->onDelete('cascade');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('role')->default('user');
         });
     }
 
@@ -31,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('books');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };

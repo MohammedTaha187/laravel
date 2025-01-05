@@ -1,13 +1,18 @@
 @extends('layout')
 
 @section('head')
-    <title>Login</title>
+    Login
 @endsection
 
 @section('body')
     <div class="container">
-        @include('errors')
-       
+        @include('errors') <!-- تأكد من أن هذا الملف موجود ولديه الكود الصحيح لعرض الأخطاء -->
+        @if(session()->has('error-message'))
+        <div class="alert alert-danger">
+            <p>{{ session()->get('error-message') }}</p>
+        </div>
+        @endif
+
         <h2 class="text-center my-4">Login</h2>
 
         <form method="POST" action="{{ url('login') }}">
@@ -28,7 +33,7 @@
                 <label class="form-check-label" for="remember">Remember me</label>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Login</button>
+            <button type="submit" value="login" class="btn btn-primary w-100">Login</button>
         </form>
 
         <div class="text-center mt-3">
